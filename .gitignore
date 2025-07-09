@@ -1,0 +1,12 @@
+# ignora el archivo "debug.log"
+# /debug.log
+/pi-propagation-of-info.zip
+
+#ignora cualquier archivo de nombre "debug.log"
+# debug.log
+
+#ignora cualquier archivo de extensión ".log"
+# *.log
+
+#ignora todas las carpetas "logs"
+# **/logs
