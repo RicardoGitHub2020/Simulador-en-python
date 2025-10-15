@@ -1,18 +1,30 @@
 ```mermaid
-objectDiagram
-    object libro1 : Libro
-    libro1 : titulo = "Cien años de soledad"
-    libro1 : autor = "Gabriel García Márquez"
-    libro1 : estaDisponible = false
+classDiagram
+    direction LR
 
-    object prestamo1 : Prestamo
-    prestamo1 : fechaPrestamo = "2025-10-14"
-    prestamo1 : fechaVencimiento = "2025-10-28"
+    class Pedido{
+        id_pedido: 101
+        fecha: 2025-10-15
+        estado: "Enviado"
+    }
+    
+    class Producto{
+        nombre: "Teléfono Móvil"
+        precio: 500
+        cantidad: 1
+    }
 
-    object socio1 : Socio
-    socio1 : nombre = "Ana Pérez"
-    socio1 : idSocio = "SP-001"
-    socio1 : numPrestamos = 1
+    class Cliente{
+        nombre: "Juan Pérez"
+        id_cliente: 12345
+    }
 
-    libro1 -- prestamo1 : "es_prestado_en"
-    socio1 -- prestamo1 : "toma_prestado"
+    class Factura{
+        id_factura: 789
+        monto: 500
+        fecha: 2025-10-15
+    }
+
+    Cliente --|> Pedido : "realiza"
+    Pedido "1" -- "1" Producto : "contiene"
+    Pedido --|> Factura : "genera"
