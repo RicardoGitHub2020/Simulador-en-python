@@ -5,17 +5,13 @@ classDiagram
     Persona <|-- Administrativo
     Persona : + edad
     Persona : + nombre
-    Persona: +actividad() {abstract}
+    Persona: + {abstract} actividad() 
     class Alumno{
-      +String beakColor
-      +swim()
-      +quack()
+      +actividad()
     }
     class Profesor{
-      -int sizeInFeet
-      -canEat()
+      +actividad()
     }
     class Administrativo{
-      +bool is_wild
-      +run()
+      +actividad()
     }
