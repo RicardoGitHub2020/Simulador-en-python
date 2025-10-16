@@ -5,7 +5,8 @@ classDiagram
     Persona <|-- Administrativo
     Persona : + edad
     Persona : + nombre
-    Persona: + {abstract} actividad() 
+    Persona : + {constructor} __init__(...)
+    Persona : + {abstract} actividad() 
     class Alumno{
       +actividad()
     }
