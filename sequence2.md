@@ -8,7 +8,22 @@ sequenceDiagram
     participant f as "nextProc: Process"
     participant g as "myModel: Model"
 
-    a->>b: depositar(100)
+    activate a
+    a->>+b: hola()
+    b->>+c: hola()
+    c-->>-b: adios()
+    b-->>-a: adios()
+    a->>+d: hola()
+    d-->>-a: adios()
+    a->>+e: hola()
+    e-->>-a: adios()
+
+    a->>+f: hola()
+    a->>f: quetal()
+    f->>+g: hola()
+    g-->>-f: adios()
+
     activate b
-    b-->>a: saldoActualizado()
+    f-->>-b: adios()
     deactivate b
+    deactivate a
