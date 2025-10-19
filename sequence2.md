@@ -1,9 +1,14 @@
 ```mermaid
 sequenceDiagram
-    participant u as "usuario: Cliente"
-    participant g as "gestor: CuentaBancaria"
+    participant a as "experiment: Simulation"
+    participant b as "engine: Simulator"
+    participant c as "agenda: List"
+    participant d as "nextEv: Event"
+    participant e as "processTable: List"
+    participant f as "nextProc: Process"
+    participant g as "myModel: Model"
 
-    u->>g: depositar(100)
-    activate g
-    g-->>u: saldoActualizado()
-    deactivate g
+    a->>b: depositar(100)
+    activate b
+    b-->>a: saldoActualizado()
+    deactivate b
