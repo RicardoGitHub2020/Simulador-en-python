@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
 Alice ->> Bob: Hello Bob, how are you?
 Bob-->>John: How about you John?
