@@ -9,21 +9,21 @@ sequenceDiagram
     participant g as "myModel: Model"
 
     activate a
-    a->>+b: hola()
-    b->>+c: hola()
-    c-->>-b: adios()
-    b-->>-a: adios()
-    a->>+d: hola()
-    d-->>-a: adios()
-    a->>+e: hola()
-    e-->>-a: adios()
+    a->>+b: self.engine.returnEvent()
+    b->>+c: self.agenda.pop()
+    c-->>-b: return item
+    b-->>-a: return nextEv
+    a->>+d: nextEv.target()
+    d-->>-a: return self.target
+    a->>+e: nextProc = self.table[target]
+    e-->>-a: return nextProc
 
-    a->>+f: hola()
-    a->>f: quetal()
-    f->>+g: hola()
-    g-->>-f: adios()
+    a->>+f: nextProc.setTime(nextEv.time)
+    a->>f: nextProc.receive(nextEv)
+    f->>+g: receive(nextEv)
+    g-->>-f: transmit(newEv)
 
     activate b
-    f-->>-b: adios()
+    f-->>-b: self.engine.inserEvent(newEv)
     deactivate b
     deactivate a
