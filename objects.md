@@ -2,29 +2,56 @@
 classDiagram
     direction LR
 
-    class Pedido{
-        id_pedido: 101
-        fecha: 2025-10-15
-        estado: "Enviado"
+    class Simulator{
+
     }
     
-    class Producto{
-        nombre: "Teléfono Móvil"
-        precio: 500
-        cantidad: 1
+    class Simulation{
+
     }
 
-    class Cliente{
-        nombre: "Juan Pérez"
-        id_cliente: 12345
+    class Process{
+
     }
 
-    class Factura{
-        id_factura: 789
-        monto: 500
-        fecha: 2025-10-15
+    class Model{
+
     }
 
-    Cliente --|> Pedido : "realiza"
-    Pedido "1" -- "1" Producto : "contiene"
-    Pedido --|> Factura : "genera"
+    class Event{
+
+    }
+
+    class ProcessList{
+
+    }
+
+    class NeighboursList{
+
+    }
+
+    class Neighbourhood{
+
+    }
+
+    class EventList{
+
+    }
+
+
+    Simulation --|> Simulator : "tiene una"
+    Simulation --|> NeighboursList : "tiene una"
+    Simulation --|> ProcessList : "tiene una"
+    ProcessList --|> Process : "contiene"
+    Process --|> Model : "asociado con"
+    Process --|> Simulator : "inserta evento en "
+    Model --|> Process : "asociado con"
+    Model --|> Neighbourhood: "tiene una"
+    Simulator --|> EventList: "tiene una"
+    NeighboursList --|> Neighbourhood: "contiene"
+    EventList --|> Event: "contiene"
+
+
+
+
+
