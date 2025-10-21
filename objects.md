@@ -22,7 +22,7 @@ classDiagram
     is an Event
     }
 
-    class tabla{
+    class table{
     is a List
     }
 
@@ -39,17 +39,17 @@ classDiagram
     }
 
 
-    experiment --|> engine : "has one"
-    experiment --|> graph: "has one"
-    experiment --|> tabla : "has one"
-    tabla --|> process : "has"
-    process --|> model : "associated to"
-    process --|> engine : "schedules event in"
-    model --|> process : "associated to"
-    model --|> neighbourhood: "has one"
-    engine --|> agenda: "has one"
-    graph --|> neighbourhood: "has"
-    agenda --|> event: "has"
+    experiment --|> engine : has one
+    experiment --|> graph: has one
+    experiment --|> table : has one
+    table --|> process : has
+    process --|> model : associated to
+    process --|> engine : schedules event in
+    model --|> process : associated to
+    model --|> neighbourhood: has one
+    engine --|> agenda: has one
+    graph --|> neighbourhood: has
+    agenda --|> event: has
 
 
 
