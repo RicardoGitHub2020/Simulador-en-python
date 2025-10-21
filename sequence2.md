@@ -24,6 +24,6 @@ sequenceDiagram
     g-->>-f: transmit(newEv)
 
     activate b
-    f-->>-b: self.engine.inserEvent(newEv)
+    f-->>-b: self.engine.insertEvent(newEv)
     deactivate b
     deactivate a
