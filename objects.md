@@ -2,54 +2,54 @@
 classDiagram
     direction LR
 
-    class Simulator{
-
+    class engine{
+    is a Simulator
     }
     
-    class Simulation{
-
+    class experiment{
+    is a Simulation
     }
 
-    class Process{
-
+    class process{
+    is a Process
     }
 
-    class Model{
-
+    class model{
+    is a Model
     }
 
-    class Event{
-
+    class event{
+    is an Event
     }
 
-    class ProcessList{
-
+    class tabla{
+    is a List
     }
 
-    class NeighboursList{
-
+    class graph{
+    is a List
     }
 
-    class Neighbourhood{
-
+    class neighbourhood{
+    is a List
     }
 
-    class EventList{
-
+    class agenda{
+    is a List
     }
 
 
-    Simulation --|> Simulator : "tiene una"
-    Simulation --|> NeighboursList : "tiene una"
-    Simulation --|> ProcessList : "tiene una"
-    ProcessList --|> Process : "contiene"
-    Process --|> Model : "asociado con"
-    Process --|> Simulator : "inserta evento en "
-    Model --|> Process : "asociado con"
-    Model --|> Neighbourhood: "tiene una"
-    Simulator --|> EventList: "tiene una"
-    NeighboursList --|> Neighbourhood: "contiene"
-    EventList --|> Event: "contiene"
+    experiment --|> engine : "has one"
+    experiment --|> graph: "has one"
+    experiment --|> tabla : "has one"
+    tabla --|> process : "has"
+    process --|> model : "associated to"
+    process --|> engine : "adds event to"
+    model --|> process : "associated to"
+    model --|> neighbourhood: "has one"
+    engine --|> agenda: "has one"
+    graph --|> neighbourhood: "has"
+    agenda --|> event: "has"
 
 
 
