@@ -44,7 +44,7 @@ classDiagram
     experiment --|> tabla : "has one"
     tabla --|> process : "has"
     process --|> model : "associated to"
-    process --|> engine : "adds event to"
+    process --|> engine : "schedules event in"
     model --|> process : "associated to"
     model --|> neighbourhood: "has one"
     engine --|> agenda: "has one"
