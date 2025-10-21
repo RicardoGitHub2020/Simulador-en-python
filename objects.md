@@ -13,6 +13,7 @@ classDiagram
     class process{
     is a Process
     }
+    note for process "is the active entity in charge of a node"
 
     class algorithm{
     is a Model
