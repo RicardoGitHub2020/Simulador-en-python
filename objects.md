@@ -14,7 +14,7 @@ classDiagram
     is a Process
     }
 
-    class model{
+    class algorithm{
     is a Model
     }
 
@@ -43,10 +43,10 @@ classDiagram
     experiment --|> graph: has one
     experiment --|> table : has one
     table --|> process : has
-    process --|> model : associated to
+    process --|> algorithm : associated to
     process --|> engine : schedules event in
-    model --|> process : associated to
-    model --|> neighbourhood: has one
+    algorithm --|> process : associated to
+    algorithm --|> neighbourhood: has one
     engine --|> agenda: has one
     graph --|> neighbourhood: has
     agenda --|> event: has
