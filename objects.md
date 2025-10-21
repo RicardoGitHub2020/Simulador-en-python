@@ -25,10 +25,12 @@ classDiagram
     class table{
     is a List
     }
-
+    note for table "there is a process in table for each node in graph"
+ 
     class graph{
     is a List
     }
+    note for graph "each entry contains the neighbours of node i, i in [1, ..., N]"
 
     class neighbourhood{
     is a List
@@ -37,7 +39,7 @@ classDiagram
     class agenda{
     is a List
     }
-
+    note for agenda "contains events ordered by time"
 
     experiment --|> engine : has one
     experiment --|> graph: has one
