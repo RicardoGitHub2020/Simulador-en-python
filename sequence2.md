@@ -6,7 +6,7 @@ sequenceDiagram
     participant d as "nextEv: Event"
     participant e as "processTable: List"
     participant f as "nextProc: Process"
-    participant g as "myModel: Model"
+    participant g as "algorithm: Model"
 
     activate a
     a->>+b: self.engine.returnEvent()
