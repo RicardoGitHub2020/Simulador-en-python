@@ -1,7 +1,7 @@
 ```mermaid
 sequenceDiagram
     participant a as "experiment: Simulation"
-    participant b as "engine: Simulator"
+    participant b as "coordinator: Scheduler"
     participant c as "agenda: List"
     participant d as "nextEv: Event"
     participant e as "processTable: List"
