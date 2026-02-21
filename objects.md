@@ -47,7 +47,7 @@ classDiagram
     experiment --|> table : has one
     table --|> process : has
     process --|> algorithm : associated to
-    process --|> coordinator : schedules event in
+    process --|> coordinator : schedules events invoking
     algorithm --|> process : associated to
     algorithm --|> neighbourhood: has one
     coordinator --|> agenda: has one
