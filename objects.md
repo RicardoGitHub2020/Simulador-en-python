@@ -2,8 +2,8 @@
 classDiagram
     direction LR
 
-    class engine{
-    is a Simulator
+    class coordinator{
+    is a Scheduler
     }
     
     class experiment{
@@ -42,15 +42,15 @@ classDiagram
     }
     note for agenda "contains events ordered by time"
 
-    experiment --|> engine : has one
+    experiment --|> coordinator : has one
     experiment --|> graph: has one
     experiment --|> table : has one
     table --|> process : has
     process --|> algorithm : associated to
-    process --|> engine : schedules event in
+    process --|> coordinator : schedules event in
     algorithm --|> process : associated to
     algorithm --|> neighbourhood: has one
-    engine --|> agenda: has one
+    coordinator --|> agenda: has one
     graph --|> neighbourhood: has
     agenda --|> event: has
 
